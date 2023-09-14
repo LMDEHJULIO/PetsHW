@@ -7,5 +7,23 @@ public class Main {
         );
 
         cat1.speak();
+
+        Dog dog1 = new Dog(
+                "Barkley"
+        );
+
+        dog1.speak();
+
+        Lizard liz1 = new Lizard(
+                "Slizzy"
+        );
+
+        liz1.speak();
+
+        Fish fish1 = new Fish(
+                "Bubbles"
+        );
+
+        fish1.speak();
     }
 }
