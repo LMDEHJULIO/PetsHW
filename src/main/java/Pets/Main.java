@@ -1,5 +1,6 @@
 package Pets;
 
+import javax.swing.plaf.synth.SynthTextAreaUI;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -53,12 +54,20 @@ public class Main {
 
         int petCount = petSurvey.nextInt();
 
-
         System.out.println("Really? That's perfect if you ask me. What kind of pet are they?");
 
-        System.out.println("So cool! What are their names in the order you listed?");
+        for(int i = 0; i < petCount; i++){
+            System.out.println("Pet #" + (i + 1) + ": type: ");
+            String type = petSurvey.nextLine();
+
+            System.out.println("What is petCount[i]'s name?");
+
+            String petName = petSurvey.nextLine();
+
+        }
 
         System.out.println("You've got a gift. Those are some cool names. So, if I have that right. These are your pets and their names: ");
+
 
 
     }
