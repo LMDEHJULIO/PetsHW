@@ -45,13 +45,13 @@ public class Main {
         boolean quit = false;
         System.out.println("Welcome to PetSurvey. What's your name?");
 
-        String name = scanner.nextLine();
+        String name = petSurvey.nextLine();
 
         User currentUser = new User(name);
 
         System.out.println("Awesome name. So, how many pets do you have?");
 
-        int petCount = scanner.nextInt();
+        int petCount = petSurvey.nextInt();
 
 
         System.out.println("Really? That's perfect if you ask me. What kind of pet are they?");
