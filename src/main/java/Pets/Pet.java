@@ -8,7 +8,6 @@ abstract class Pet {
 
     private String speciesName;
 
-
     private boolean isAdult;
 
     private String color;

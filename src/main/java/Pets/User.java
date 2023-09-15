@@ -17,6 +17,10 @@ public class User {
         }
     }
 
+    public String getName(){
+        return name;
+    }
+
     public List<Pet> getPets(){
         return pets;
     }

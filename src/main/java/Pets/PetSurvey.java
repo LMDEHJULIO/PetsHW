@@ -1,4 +1,6 @@
 package Pets;
+import java.text.NumberFormat;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class PetSurvey {
     Scanner petSurvey = new Scanner(System.in);
@@ -17,14 +19,23 @@ public class PetSurvey {
         return petSurvey.nextLine();
     }
 
-    private int askForPetCount(){
-        System.out.println("Awesome name. So, how many pets do you have?");
+    private int askForPetCount(String name){
+        System.out.println("Awesome name. So, how many pets do you have, " + name+ "?");
 
-        int count = petSurvey.nextInt();
+        try {
+            int count = petSurvey.nextInt();
 
-        petSurvey.nextLine();
+            petSurvey.nextLine();
 
-        return count;
+            return count;
+        } catch (InputMismatchException e) {
+            System.out.println("Please enter a valid option.");
+
+            petSurvey.nextLine();
+        }
+
+
+        return 0;
     }
 
     private void exitStatement(int petCount) {
@@ -42,7 +53,21 @@ public class PetSurvey {
 
         displayOptions(options);
 
-        int option = Integer.parseInt(petSurvey.nextLine());
+
+        int option;
+
+        while(true) {
+            try {
+                option = Integer.parseInt(petSurvey.nextLine());
+
+                if(option < 1 || option > 4){
+                    throw new NumberFormatException();
+                }
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Please Select a Valid Option");
+            }
+        }
 
         System.out.println("What's their name");
 
@@ -66,7 +91,7 @@ public class PetSurvey {
 
         User currentUser = new User(name);
 
-        int petCount = askForPetCount();
+        int petCount = askForPetCount(name);
 
         for(int i = 0; i < petCount; i++){
             selectPet(currentUser, i);
