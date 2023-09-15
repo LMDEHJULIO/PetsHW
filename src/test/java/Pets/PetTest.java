@@ -10,11 +10,14 @@ class PetTest {
 
     @Test
     void getName() {
-        assertEquals("Slizzy", petMock.getName());}
+        assertEquals("Slizzy", petMock.getName());
+    }
 
-//    @Test
-//    void setName() {
-//    }
+    @Test
+    void setName() {
+        petMock.setName("Charzard");
+        assertEquals("Charzard", petMock.getName());
+    }
 //
 //    @Test
 //    void speak() {

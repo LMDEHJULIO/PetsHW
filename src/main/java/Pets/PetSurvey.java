@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class PetSurvey {
     Scanner petSurvey = new Scanner(System.in);
 
-    String[] options = {"1. Dog", "2. Cat", "3. Rodent", "4. Lizard"};
+    String[] options = {"1. Dog", "2. Cat", "3. Rodent", "4. Lizard", "5. Fish"};
 
     static void displayOptions(String[] options){
         for(String option : options){
@@ -41,6 +41,7 @@ public class PetSurvey {
                 case 2 -> currentUser.addPet(new Cat(petName));
                 case 3 -> currentUser.addPet(new Rodent(petName));
                 case 4 -> currentUser.addPet(new Lizard(petName));
+                case 5 -> currentUser.addPet(new Fish(petName));
                 default -> System.out.println("We currently support Dogs, Cats, Rodents, and Lizards. Looks like we should expand our survey!");
             }
 
