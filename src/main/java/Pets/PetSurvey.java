@@ -58,7 +58,7 @@ public class PetSurvey {
             try {
                 option = Integer.parseInt(petSurvey.nextLine());
 
-                if(option < 1 || option > 4){
+                if(option < 1 || option > options.length){
                     throw new NumberFormatException();
                 }
                 break;
