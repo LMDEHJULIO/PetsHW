@@ -1,0 +1,15 @@
+- Variables 
+- Primitive v Reference types 
+- Dot notation/attributes for ref types
+- Heap - Garbage collecting
+- Arrays - tray analogy
+- Objects - state and behavior
+- Params and return types
+- Encapsulation
+- Objects in an Array
+- Instance variables v local vars
+- Comparing prim/ref types
+- Think like the compiler
+- Methods
+- Mapping methods/programs
+- Calles 
