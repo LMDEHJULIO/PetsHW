@@ -6,6 +6,13 @@ import java.util.Scanner;
 
 
 public class Main {
+
+    static void displayOptions(String[] options){
+        for(String option : options){
+            System.out.println(option);
+        }
+    }
+
     public static void main(String[] args) {
         Cat cat1 = new Cat(
                 "Mittens"
@@ -31,8 +38,6 @@ public class Main {
 
         fish1.speak();
 
-
-
         User user1 = new User("Julio");
 
         user1.addPet(dog1);
@@ -44,6 +49,11 @@ public class Main {
         Scanner petSurvey = new Scanner(System.in);
 
         boolean quit = false;
+
+        String[] options = {"1. Dog", "2. Cat", "3. Rodent", "4. Lizard"};
+
+
+
         System.out.println("Welcome to PetSurvey. What's your name?");
 
         String name = petSurvey.nextLine();
@@ -58,11 +68,30 @@ public class Main {
 
         for(int i = 0; i < petCount; i++){
             System.out.println("Pet #" + (i + 1) + ": type: ");
+
+            displayOptions(options);
+
+            int option = Integer.parseInt(petSurvey.nextLine());
+
+            switch(option){
+                case 1:
+                    System.out.println("Issa Dog");
+                case 2:
+                    System.out.println("Issa Cat");
+                case 3:
+                    System.out.println("Issa Roder");
+                case 4:
+                    System.out.println("Issa Lizard");
+            }
+
             String type = petSurvey.nextLine();
 
             System.out.println("What is petCount[i]'s name?");
 
+
             String petName = petSurvey.nextLine();
+
+
 
             currentUser.addPet(new Dog(petName));
 
