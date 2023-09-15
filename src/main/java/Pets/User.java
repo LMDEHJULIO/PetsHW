@@ -13,7 +13,7 @@ public class User {
 
     public void printPets(){
         for(Pet pet : pets){
-            System.out.println(pet.getName());
+            pet.speak();
         }
     }
 

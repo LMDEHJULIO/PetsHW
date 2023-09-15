@@ -14,45 +14,11 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Cat cat1 = new Cat(
-                "Mittens"
-        );
-
-        cat1.speak();
-
-        Dog dog1 = new Dog(
-                "Barkley"
-        );
-
-        dog1.speak();
-
-        Lizard liz1 = new Lizard(
-                "Slizzy"
-        );
-
-        liz1.speak();
-
-        Fish fish1 = new Fish(
-                "Bubbles"
-        );
-
-        fish1.speak();
-
-        User user1 = new User("Julio");
-
-        user1.addPet(dog1);
-        user1.addPet(liz1);
-
-
-        user1.printPets();
-
         Scanner petSurvey = new Scanner(System.in);
 
         boolean quit = false;
 
         String[] options = {"1. Dog", "2. Cat", "3. Rodent", "4. Lizard"};
-
-
 
         System.out.println("Welcome to PetSurvey. What's your name?");
 
@@ -74,32 +40,29 @@ public class Main {
 
             int option = Integer.parseInt(petSurvey.nextLine());
 
-            switch (option) {
-                case 1 -> System.out.println("Issa Dog");
-                case 2 -> System.out.println("Issa Cat");
-                case 3 -> System.out.println("Issa Roder");
-                case 4 -> System.out.println("Issa Lizard");
-                default -> System.out.println("Never heard of it");
-            }
-
-//            String type = petSurvey.nextLine();
-
-            System.out.println("What is petCount[i]'s name?");
-
+            System.out.println("What's their name");
 
             String petName = petSurvey.nextLine();
 
 
 
-            currentUser.addPet(new Dog(petName));
+            switch (option) {
+                case 1 -> currentUser.addPet(new Dog(petName));
+                case 2 -> currentUser.addPet(new Cat(petName));
+                case 3 -> currentUser.addPet(new Rodent(petName));
+                case 4 -> currentUser.addPet(new Lizard(petName));
+                default -> System.out.println("We currently support Dogs, Cats, Rodents, and Lizards. Looks like we should expand our survey!");
+            }
 
         }
 
-        System.out.println("You've got a gift. Those are some cool names. So, if I have that right. These are your pets and their names: ");
+        if(petCount > 1){
+            System.out.println("You've got a gift. Those are some cool names. Would you look at that, they're all right here. Hi pets!");
+        } else {
+            System.out.println("What a cool name! Oh look, they're right here. Hi, buddy!");
+        }
 
         currentUser.printPets();
-
-
     }
 
 
