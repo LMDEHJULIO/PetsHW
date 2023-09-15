@@ -12,7 +12,9 @@ public class User {
     }
 
     public void printPets(){
-        System.out.println(pets);
+        for(Pet pet : pets){
+            System.out.println(pet.getName());
+        }
     }
 
     public List<Pet> getPets(){

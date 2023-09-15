@@ -33,6 +33,7 @@ public class Main {
         User user1 = new User("Julio");
 
         user1.addPet(dog1);
+        user1.addPet(liz1);
 
 
         user1.printPets();
