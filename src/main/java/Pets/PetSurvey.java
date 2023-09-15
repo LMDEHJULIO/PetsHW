@@ -8,9 +8,7 @@ public class PetSurvey {
     String[] options = {"1. Dog", "2. Cat", "3. Rodent", "4. Lizard", "5. Fish"};
 
     static void displayOptions(String[] options){
-        for(String option : options){
-            System.out.println(option);
-        }
+        for(String option : options){ System.out.println(option); }
     }
 
     private String askForName(){
