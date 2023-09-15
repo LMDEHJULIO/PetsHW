@@ -20,4 +20,9 @@ abstract class Cake {
     public void setPrice(String price){
         this.flavor = price;
     }
+
+    public Cake(String flavor, double price){
+        this.flavor = flavor;
+        this.price = price;
+    }
 }
