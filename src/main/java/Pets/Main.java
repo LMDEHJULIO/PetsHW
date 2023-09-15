@@ -1,6 +1,8 @@
 package Pets;
 
 import java.util.Arrays;
+import java.util.Scanner;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -37,5 +39,27 @@ public class Main {
 
 
         user1.printPets();
+
+        Scanner petSurvey = new Scanner(System.in);
+
+        boolean quit = false;
+        System.out.println("Welcome to PetSurvey. What's your name?");
+
+        String name = scanner.nextLine();
+
+        User currentUser = new User(name);
+
+        System.out.println("Awesome name. So, how many pets do you have?");
+
+        int petCount = scanner.nextInt();
+
+
+        System.out.println("Really? That's perfect if you ask me. What kind of pet are they?");
+
+        System.out.println("So cool! What are their names in the order you listed?");
+
+        System.out.println("You've got a gift. Those are some cool names. So, if I have that right. These are your pets and their names: ");
+
+
     }
 }
