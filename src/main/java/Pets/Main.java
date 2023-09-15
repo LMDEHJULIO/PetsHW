@@ -64,11 +64,16 @@ public class Main {
 
             String petName = petSurvey.nextLine();
 
+            currentUser.addPet(new Dog(petName));
+
         }
 
         System.out.println("You've got a gift. Those are some cool names. So, if I have that right. These are your pets and their names: ");
 
+        currentUser.printPets();
 
 
     }
+
+
 }
