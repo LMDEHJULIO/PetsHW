@@ -63,6 +63,7 @@ public class Main {
         System.out.println("Awesome name. So, how many pets do you have?");
 
         int petCount = petSurvey.nextInt();
+        petSurvey.nextLine();
 
         System.out.println("Really? That's perfect if you ask me. What kind of pet are they?");
 
@@ -73,18 +74,15 @@ public class Main {
 
             int option = Integer.parseInt(petSurvey.nextLine());
 
-            switch(option){
-                case 1:
-                    System.out.println("Issa Dog");
-                case 2:
-                    System.out.println("Issa Cat");
-                case 3:
-                    System.out.println("Issa Roder");
-                case 4:
-                    System.out.println("Issa Lizard");
+            switch (option) {
+                case 1 -> System.out.println("Issa Dog");
+                case 2 -> System.out.println("Issa Cat");
+                case 3 -> System.out.println("Issa Roder");
+                case 4 -> System.out.println("Issa Lizard");
+                default -> System.out.println("Never heard of it");
             }
 
-            String type = petSurvey.nextLine();
+//            String type = petSurvey.nextLine();
 
             System.out.println("What is petCount[i]'s name?");
 
