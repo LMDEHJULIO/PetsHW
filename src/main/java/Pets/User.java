@@ -11,7 +11,15 @@ public class User {
         pets.add(newPet); // used list to get add method for easier insertion.
     }
 
-    public User(String name, Pet[] pets) {
+    public void printPets(){
+        System.out.println(pets);
+    }
+
+    public List<Pet> getPets(){
+        return pets;
+    }
+
+    public User(String name) {
         this.name = name;
         this.pets = new ArrayList<>();
     }

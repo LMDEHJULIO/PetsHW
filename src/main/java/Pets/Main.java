@@ -1,5 +1,7 @@
 package Pets;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         Cat cat1 = new Cat(
@@ -25,5 +27,14 @@ public class Main {
         );
 
         fish1.speak();
+
+
+
+        User user1 = new User("Julio");
+
+        user1.addPet(dog1);
+
+
+        user1.printPets();
     }
 }
