@@ -12,4 +12,9 @@
 - Think like the compiler
 - Methods
 - Mapping methods/programs
-- Calles 
+- JavaLibrary
+- ArrayList
+- Inheritance / polymorphism aka "many forms"
+- Overrides/overload - Abstract v Concrete
+- Interfaces
+- 
