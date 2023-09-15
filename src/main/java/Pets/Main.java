@@ -44,8 +44,6 @@ public class Main {
 
             String petName = petSurvey.nextLine();
 
-
-
             switch (option) {
                 case 1 -> currentUser.addPet(new Dog(petName));
                 case 2 -> currentUser.addPet(new Cat(petName));
