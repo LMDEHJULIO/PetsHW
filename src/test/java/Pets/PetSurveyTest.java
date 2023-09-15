@@ -11,7 +11,7 @@ class PetSurveyTest {
     ByteArrayOutputStream consoleLog = new ByteArrayOutputStream();
     @Test
     void displayOptions() {
-        String[] options = {"1. Dog", "2. Cat", "3. Rodent", "Lizard"};
+        String[] options = {"1. Dog", "2. Cat", "3. Rodent"};
 
         PetSurvey.displayOptions(options);
 
