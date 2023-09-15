@@ -10,5 +10,13 @@ class DogTest {
     @Test
     void speak() {
         // compare console output to expected text - speak does not return string
+
+        java.io.ByteArrayOutputStream printLog = new java.io.ByteArrayOutputStream();
+
+        System.setOut(new java.io.PrintStream(printLog));
+
+        petMock.speak();
+
+        assertEquals("Woof, my name is buddy. I am a dog.", printLog);
     }
 }
