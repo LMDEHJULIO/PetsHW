@@ -17,6 +17,8 @@ class DogTest {
 
         petMock.speak();
 
-        assertEquals("Woof, my name is buddy. I am a dog.", printLog);
+
+
+        assertEquals("Woof, my name is Scruffy. I am a dog.", printLog.toString().trim());
     }
 }
